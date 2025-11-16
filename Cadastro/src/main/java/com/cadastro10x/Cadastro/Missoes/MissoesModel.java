@@ -27,5 +27,8 @@ public class MissoesModel {
     @JsonIgnore
     private List<NinjaModel> ninja;
 
-
+//======================
+    public void setId(Long id) {
+    }
+//======================
 }

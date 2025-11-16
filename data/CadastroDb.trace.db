@@ -1,3 +1,7 @@
 2025-11-14 11:22:18.670091-03:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM TB_MISSOES TB_CADASTRO [*]TB_CADASTRO"; SQL statement:
 SELECT * FROM TB_MISSOES TB_CADASTRO TB_CADASTRO [42000-232]
+2025-11-15 20:35:56.918241-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT [*]TO TB_MISSOES(id, dificuldade, nome)\000d\000aVALUES(3, 'DIFICIL', 'MISSAO TESTE 3')"; expected "INTO"; SQL statement:
+INSERT TO TB_MISSOES(id, dificuldade, nome)
+VALUES(3, 'DIFICIL', 'MISSAO TESTE 3') [42001-232]

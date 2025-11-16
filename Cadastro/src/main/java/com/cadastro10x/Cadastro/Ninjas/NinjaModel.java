@@ -41,6 +41,8 @@ public class NinjaModel {
     @JoinColumn(name = "missoes_id")//Foreing key ou chave estrangeira
     private MissoesModel missoes;
 
-
-
+//======================
+    public void setId(Long id) {
+    }
+//======================
 }
