@@ -4,18 +4,25 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
+
 @Service
 public class NinjaService {
 
     private NinjaRepository ninjaRepository;
+    private NinjaMapper ninjaMapper;
 
-    public NinjaService(NinjaRepository ninjaRepository) {
+
+    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
         this.ninjaRepository = ninjaRepository;
+        this.ninjaMapper = ninjaMapper;
     }
 
     //Criar um novo ninjas
-    public NinjaModel criarNinja(NinjaModel ninja){
-        return ninjaRepository.save(ninja);
+    public NinjaModel criarNinja(NinjaDTO ninja){
+        NinjaModel ninjaDto = ninjaMapper.map(ninja);
+      ninjaDto = ninjaRepository.save(ninjaDto);
+      return ninjaMapper.map(ninja);
     }
 
     //Listar todos os ninjas
