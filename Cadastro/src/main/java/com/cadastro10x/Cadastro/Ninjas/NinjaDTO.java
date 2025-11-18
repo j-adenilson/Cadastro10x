@@ -7,7 +7,7 @@ import lombok.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class NinjaDTO {
+public class NinjaDTO extends NinjaModel {
 
     private Long id;
     private String nome;
