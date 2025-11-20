@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninjas Listados</title>
+</head>
+<body>
+
+    <h1>Lista de Ninjas</h1>
+<tab>
+    <thead>
+    <tr>
+        <th>Imagem</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Idade</th>
+        <th>Rank</th>
+        <th>Missoes</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="ninja: ${ninjas}">
+
+            <td> <img th:src="${ninja.imgUrl}"></td>
+            <td> th:text="${ninja.id}"</td>
+            <td> th:text="${ninja.nome}"</td>
+            <td> th:text="${ninja.idade}"</td>
+            <td> th:text="${ninja.email}"</td>
+            <td> th:text="${ninja.rank}"</td>
+            <td> th:text="${ninja.missoes}"</td>
+        </tr>
+
+
+    </tbody>
+
+
+</tab>
+
+</body>
+</html>
