@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhe do ninja</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+</head>
+<body>
+
+<h1>Detalhe do ninja</h1>
+
+<table>
+    <thead>
+    </thead>
+    <tbody>
+
+    <tr th:each="missao : ${ninja.missoes}">
+        <td th:text="${missao.noome}"></td>
+        <td th:text="${missao.dificuldade}"></td>
+    </tr>
+
+    </tbody>
+</table>
+<div>
+    <a href="ninjas/ui/listar">Voltar para a lista de ninjas</a>
+</div>
+
+</body>
+</html>
